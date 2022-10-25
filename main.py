@@ -22,6 +22,7 @@ operations = {
   "*": multiply,
   "/": divide
 }
+
 #recursion function, to start over app
 def start_over():
   num1 = float(input("What's the first number?:\n")) 
@@ -32,6 +33,7 @@ def start_over():
   operation_symbol = input("Pick and operation from the line above: ")
   
   num2 = float(input("What's the second number?:\n"))
+  
   #function for first operation
   def calculate(num1, num2, operation_symbol):
     calc = operations[operation_symbol](num1, num2)
@@ -39,6 +41,7 @@ def start_over():
   answer = calculate(num1, num2, operation_symbol)
   
   print(f"{num1} {operation_symbol} {num2} = {answer}")
+  
   #loop to choose if you want to continue counting or start over app
   is_continue = True
   while is_continue:
